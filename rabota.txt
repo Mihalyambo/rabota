@@ -1,0 +1,50 @@
+1. Пишем в терминале django-admin startproject ksenia 
+2. файл-сеттинг- project: (название)
+python interpreter - add unterpreter - нажимаем + - django
+3. cd ksenia
+4.python manage.py runserver (создается сервер) 
+3. Создаём приложение python manage.py startapp (название приложения ksenia1) (создается папка с migrations) 
+4. делаем модели 
+
+5. Заходим в settings.py и пишем 
+в installed_apps своё приложение "ksenia1" 
+Пишем в терминал python manage.py makemigrations (название)
+Пишем manage.py migrate 
+
+6. Пишем python manage py createsuperuser 
+
+После этого manage py runserver
+7. В папке admin.py пишем  
+from (название).models import Названия Моделей (заполняем customers и seller)
+
+admin.site.register(Модели)
+8. Заходим во views пишем что на первом скрине(копируем до 16 строки и убрать 3,4 строчку серые)
+Потом создаём папку templates(в misha1),в ней html файл (custome)и пишем первую часть
+Заходим в urls.py и пишем третий скрин
+Потом создаём в приложении urls.py
+
+Прописываем путь в приложении
+
+Заходим на сервер прописываем вверху customer
+
+Создаем seller html
+Заходим на сервер прописываем вверху seller
+
+Создаем index html
+<h2> Добро пожаловать на наш сайт</h2>
+    <ul>
+        <li><a  href="customer/"> Список продавцов</a></li>
+        <li><a  href="seller/"> Список покупателей</a></li>
+    </ul>
+Пишем вот это
+
+Переходим в views и пишем следующее
+def index(request):
+    return render(request, "index.html")
+это нужно написать в 5 строчку и убрать redirect вместе с запятой
+
+После этого снова проверяем сайт и прописываем index
+
+После этого заходим в misha1 добавляем index/ к customer и seller
+
+в index html добавляем тоже  index/ к customer и seller
