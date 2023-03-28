@@ -1,0 +1,16 @@
+py -m pip install --user virtualenv
+
+py -m venv env
+
+.\env\Scripts\activate
+
+python -m pip install Django
+
+python -m django --version
+
+django-admin startproject misha
+
+python manage.py startapp myapp
+
+cd misha 
+python manage.py runserver
